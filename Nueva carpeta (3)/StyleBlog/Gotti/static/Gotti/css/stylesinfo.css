@@ -1,0 +1,319 @@
+/* Estilo para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Estilo para la cabecera */
+.header {
+    background-color: #1E1E1E;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Asegura que haya espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente */
+}
+
+/* Contenedor de la navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Permite que la barra de navegación ocupe el espacio disponible */
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 10px; /* Reduce la distancia entre los elementos */
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Estilo para el icono del carrito */
+.cart-icon {
+    width: 24px;
+    margin-left: auto; /* Mueve el ícono del carrito al extremo derecho */
+}
+
+/* Estilo para el logo */
+.logo-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto; /* Centra el logo */
+}
+
+/* Estilo para la sección de servicios */
+.servicios-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    height: 350px; /* Altura ajustada */
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.image-container {
+    width: 100%;
+    height: 60%; /* Ajusta la altura de la imagen */
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .image-container img {
+    transform: scale(1.1); /* Ampliar la imagen al pasar el mouse */
+}
+
+/* Contenedor del contenido con transparencia */
+.card-hover-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* Ajusta la altura de la transparencia */
+    background-color: rgba(0, 0, 0, 0.831); /* Fondo negro semitransparente */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-hover-content {
+    opacity: 1; /* Muestra el contenido al pasar el mouse */
+}
+
+.card-content {
+    padding: 10px;
+    color: #333;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #000; /* Color negro para el texto */
+}
+
+.card-content p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #777; /* Color gris para el texto */
+}
+
+.card-hover-content h3,
+.card-hover-content p,
+.card-hover-content button {
+    margin: 5px 0;
+}
+
+/* Estilo para el botón */
+.card-hover-content button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 20px; /* Ajusta el padding para hacer el botón más corto */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin: 0 auto; /* Centra el botón */
+    display: block; /* Asegura que el botón se centre con `margin: 0 auto` */
+}
+
+.card-hover-content button:hover {
+    background-color: #444;
+}
+
+/* Estilo para el pie de página */
+.footer {
+    background-color: #1E1E1E;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    margin: 0 10px;
+}
+
+/* Estilos para la sección de horarios disponibles para el cliente */
+.horarios-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.horarios-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.horarios-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.horarios-form label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Estilos para los selectores de día y hora */
+.horarios-form select {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align-last: center; /* Centra el texto en el selector */
+    appearance: none; /* Oculta el ícono predeterminado del navegador */
+}
+
+/* Contenedor de botones */
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilo para los botones */
+.botones button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botones button:hover {
+    background-color: #333;
+}
+
+/* Pie de página (mantener consistente con el resto del sitio) */
+.footer {
+    background-color: #1E1E1E;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    margin: 0 10px;
+}
+
+
+.confirmacion-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.confirmacion-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.icono-confirmacion {
+    margin-bottom: 20px;
+}
+
+.confirmacion-card h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.confirmacion-card p {
+    color: #777;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.btn-confirmacion {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-confirmacion:hover {
+    background-color: #333;
+}
