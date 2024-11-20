@@ -79,14 +79,13 @@ WSGI_APPLICATION = 'StyleBlog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'styleblog',
+        'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',  # O la IP del servidor si no es local
-        'PORT': '3306',  # El puerto por defecto de MySQL
+        'PASSWORD': 'FpxDSKBwHxwaOqIZjUrssLdJVoYIcaED',
+        'HOST': 'junction.proxy.rlwy.net',
+        'PORT': '30791',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
