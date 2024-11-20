@@ -3,11 +3,10 @@
     "setup": {
       "nixpkgs": [
         "mysql-client",
-        "mysql",
+        "libmysqlclient-dev",
         "gcc",
         "python3",
         "python3-pip",
-        "libmysqlclient-dev",
         "libffi",
         "openssl"
       ]
