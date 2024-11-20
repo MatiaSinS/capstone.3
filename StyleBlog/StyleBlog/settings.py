@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-
+from decouple import config
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -76,16 +76,20 @@ WSGI_APPLICATION = 'StyleBlog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+DEBUG = config('DEBUG', default=False, cast=bool)
+SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'railway',
-        'USER': 'root',
-        'PASSWORD': 'FpxDSKBwHxwaOqIZjUrssLdJVoYIcaED',
-        'HOST': 'junction.proxy.rlwy.net',
-        'PORT': '30791',
+        'NAME': config('railway'),
+        'USER': config('root'),
+        'PASSWORD': config('FpxDSKBwHxwaOqIZjUrssLdJVoYIcaED'),
+        'HOST': config('junction.proxy.rlwy.net'),
+        'PORT': config('30791'),
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -122,9 +126,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
+MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Agrega esto
+    ...
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
